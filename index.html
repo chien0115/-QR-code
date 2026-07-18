@@ -16,14 +16,17 @@
         --divider: #e6e8e9;
       }
 
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
 
       body {
         margin: 0;
         padding: 24px 12px;
         min-height: 100vh;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-          "PingFang TC", "Microsoft JhengHei", sans-serif;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC",
+          "Microsoft JhengHei", sans-serif;
         background: var(--bg-page);
         color: var(--text-dark);
       }
@@ -39,9 +42,14 @@
         justify-content: center;
         gap: 14px;
         z-index: 999;
-        transition: opacity 0.5s ease, visibility 0.5s ease;
+        transition:
+          opacity 0.5s ease,
+          visibility 0.5s ease;
       }
-      .splash img { width: 50px; height: auto; }
+      .splash img {
+        width: 50px;
+        height: auto;
+      }
       .splash .splash-text {
         color: #fff;
         font-size: 20px;
@@ -65,7 +73,9 @@
         opacity: 0;
         transition: opacity 0.5s ease;
       }
-      .card.show { opacity: 1; }
+      .card.show {
+        opacity: 1;
+      }
 
       /* ── 上方頭像/姓名區 ──────────────────────────────────── */
       .header {
@@ -78,7 +88,9 @@
       .header::after {
         content: "";
         position: absolute;
-        left: 0; right: 0; bottom: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         height: 3px;
         background: var(--accent);
       }
@@ -99,9 +111,17 @@
         color: #fff;
         overflow: hidden;
       }
-      .avatar img { width: 100%; height: 100%; object-fit: cover; }
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-      .name { font-size: 22px; font-weight: 700; margin: 0 0 4px; }
+      .name {
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0 0 4px;
+      }
       .name .en {
         display: block;
         font-size: 14px;
@@ -138,9 +158,13 @@
         font-size: 11px;
         font-weight: 700;
         letter-spacing: 0.6px;
-        transition: background 0.2s ease, transform 0.15s ease;
+        transition:
+          background 0.2s ease,
+          transform 0.15s ease;
       }
-      .actions a:active { transform: scale(0.96); }
+      .actions a:active {
+        transform: scale(0.96);
+      }
       .actions .icon-badge {
         width: 34px;
         height: 34px;
@@ -150,10 +174,16 @@
         align-items: center;
         justify-content: center;
       }
-      .actions svg { width: 16px; height: 16px; color: #fff; }
+      .actions svg {
+        width: 16px;
+        height: 16px;
+        color: #fff;
+      }
 
       /* ── 明細區:圓角卡片列 ───────────────────────────────── */
-      .details { padding: 16px 20px 28px; }
+      .details {
+        padding: 16px 20px 28px;
+      }
       .row {
         display: flex;
         align-items: flex-start;
@@ -163,7 +193,9 @@
         margin-bottom: 6px;
         transition: background 0.2s ease;
       }
-      .row:hover { background: #f7f4ee; }
+      .row:hover {
+        background: #f7f4ee;
+      }
       .row .icon-badge {
         width: 34px;
         height: 34px;
@@ -174,9 +206,19 @@
         justify-content: center;
         flex-shrink: 0;
       }
-      .row svg { width: 16px; height: 16px; color: var(--accent); }
-      .row .value { font-size: 15px; color: var(--text-dark); }
-      .row .value a { color: inherit; text-decoration: none; }
+      .row svg {
+        width: 16px;
+        height: 16px;
+        color: var(--accent);
+      }
+      .row .value {
+        font-size: 15px;
+        color: var(--text-dark);
+      }
+      .row .value a {
+        color: inherit;
+        text-decoration: none;
+      }
       .row .label {
         font-size: 12px;
         color: var(--text-grey);
@@ -211,7 +253,7 @@
 
     <div class="card" id="card">
       <div class="header">
-        <div class="avatar"><img src="logo3.png" alt="錢庭羽" /></div>
+        <div class="avatar"><img src="logo.png" alt="錢庭羽" /></div>
         <div class="name">
           錢庭羽
           <span class="en">Chien Ting-Yu, Skylar</span>
@@ -226,15 +268,27 @@
       <div class="actions">
         <a href="tel:+886979153650">
           <span class="icon-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+              />
             </svg>
           </span>
           CALL
         </a>
         <a href="mailto:huerng.horng@msa.hinet.net">
           <span class="icon-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <path d="M22 6l-10 7L2 6" />
               <rect x="2" y="4" width="20" height="16" rx="2" />
             </svg>
@@ -247,7 +301,12 @@
           rel="noopener"
         >
           <span class="icon-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
               <circle cx="12" cy="10" r="3" />
             </svg>
@@ -259,64 +318,109 @@
       <div class="details">
         <div class="row">
           <span class="icon-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+              />
             </svg>
           </span>
           <div>
-            <div class="value"><a href="tel:+886979153650">+886 979 153 650</a></div>
+            <div class="value">
+              <a href="tel:+886979153650">+886 979 153 650</a>
+            </div>
             <div class="label">Mobile</div>
           </div>
         </div>
 
         <div class="row">
           <span class="icon-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+              />
             </svg>
           </span>
           <div>
-            <div class="value"><a href="tel:+886422809790">+886 4 2280 9790</a></div>
+            <div class="value">
+              <a href="tel:+886422809790">+886 4 2280 9790</a>
+            </div>
             <div class="label">Telephone</div>
           </div>
         </div>
 
         <div class="row">
           <span class="icon-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <path d="M22 6l-10 7L2 6" />
               <rect x="2" y="4" width="20" height="16" rx="2" />
             </svg>
           </span>
           <div>
-            <div class="value"><a href="mailto:huerng.horng@msa.hinet.net">huerng.horng@msa.hinet.net</a></div>
+            <div class="value">
+              <a href="mailto:huerng.horng@msa.hinet.net"
+                >huerng.horng@msa.hinet.net</a
+              >
+            </div>
             <div class="label">Email</div>
           </div>
         </div>
 
         <div class="row">
           <span class="icon-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
               <circle cx="12" cy="10" r="3" />
             </svg>
           </span>
           <div>
-            <div class="value">163, Dongmen Rd., East Dist.,<br />Taichung City 401, Taiwan</div>
+            <div class="value">
+              163, Dongmen Rd., East Dist.,<br />Taichung City 401, Taiwan
+            </div>
             <div class="label">Address</div>
           </div>
         </div>
 
         <div class="row">
           <span class="icon-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <circle cx="12" cy="12" r="10" />
               <line x1="2" y1="12" x2="22" y2="12" />
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              />
             </svg>
           </span>
           <div>
-            <div class="value"><a href="https://huernghorng.com" target="_blank" rel="noopener">huernghorng.com</a></div>
+            <div class="value">
+              <a href="https://huernghorng.com" target="_blank" rel="noopener"
+                >huernghorng.com</a
+              >
+            </div>
             <div class="label">Website</div>
           </div>
         </div>

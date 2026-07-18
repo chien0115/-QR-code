@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>錢庭羽 Chien Ting-Yu | HUERNG HORNG HARDWARES</title>
+<style>
+  :root{
+    --brand-dark: #3d4f56;   /* 主色：深灰藍，可自行調整 */
+    --brand-dark-2: #33434a;
+    --text-dark: #222222;
+    --text-grey: #7a7a7a;
+    --bg-light: #f5f6f7;
+    --divider: #e2e4e5;
+  }
+
+  * { box-sizing: border-box; }
+
+  body{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+  }
+
+  .card{
+    max-width: 480px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+  }
+
+  /* ── 上方深色區塊：頭像 / 姓名 / 職稱 ───────────────────── */
+  .header{
+    background: var(--brand-dark);
+    color: #fff;
+    text-align: center;
+    padding: 48px 24px 32px;
+  }
+
+  /* 大頭照佔位框：之後把 logo.png / 個人照放進專案資料夾，
+     並把下面 <div class="avatar"> 換成
+     <img class="avatar" src="logo.png" alt="錢庭羽"> 即可 */
+  .avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    overflow: hidden;
+  }
+  .avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .name{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  .name .en{
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0.85;
+    margin-top: 4px;
+  }
+  .title{
+    font-size: 14px;
+    opacity: 0.85;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+
+  /* ── 按鈕列：Call / Email / Directions ──────────────────── */
+  .actions{
+    display: flex;
+    background: var(--brand-dark-2);
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .actions a{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    border-right: 1px solid rgba(255,255,255,0.12);
+  }
+  .actions a:last-child{ border-right: none; }
+  .actions svg{ width: 20px; height: 20px; }
+
+  /* ── 明細區 ─────────────────────────────────────────────── */
+  .details{ padding: 8px 24px 40px; }
+  .row{
+    display: flex;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+  .row:last-child{ border-bottom: none; }
+  .row svg{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--text-grey);
+  }
+  .row .value{
+    font-size: 16px;
+    color: var(--text-dark);
+    text-decoration: none;
+  }
+  .row .value a{ color: inherit; text-decoration: none; }
+  .row .label{
+    font-size: 13px;
+    color: var(--text-grey);
+    margin-top: 2px;
+  }
+
+  .company-footer{
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: var(--text-grey);
+    border-top: 1px solid var(--divider);
+  }
+  .company-footer a{ color: var(--brand-dark); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- 上方頭像/姓名區 -->
+  <div class="header">
+    <!-- 佔位頭像，之後換成 <img class="avatar" src="logo.png" alt="錢庭羽"> -->
+    <div class="avatar">錢</div>
+    <div class="name">
+      錢庭羽
+      <span class="en">Chien Ting-Yu, Skylar</span>
+    </div>
+    <div class="title">
+      工程師 Engineer<br>
+      HUERNG HORNG HARDWARES CO., LTD<br>
+      恒鋐五金有限公司
+    </div>
+  </div>
+
+  <!-- Call / Email / Directions 按鈕 -->
+  <div class="actions">
+    <a href="tel:+886979153650">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      CALL
+    </a>
+    <a href="mailto:huerng.horng@msa.hinet.net">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke="none"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+      EMAIL
+    </a>
+    <a href="https://www.google.com/maps/search/?api=1&query=163%2C+Dongmen+Rd.%2C+East+Dist.%2C+Taichung+City+401%2C+Taiwan" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      DIRECTIONS
+    </a>
+  </div>
+
+  <!-- 明細 -->
+  <div class="details">
+
+    <div class="row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <div>
+        <div class="value"><a href="tel:+886979153650">+886 979 153 650</a></div>
+        <div class="label">Mobile</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <div>
+        <div class="value"><a href="tel:+886422809790">+886 4 2280 9790</a></div>
+        <div class="label">Telephone</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+      <div>
+        <div class="value"><a href="mailto:huerng.horng@msa.hinet.net">huerng.horng@msa.hinet.net</a></div>
+        <div class="label">Email</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div>
+        <div class="value">163, Dongmen Rd., East Dist.,<br>Taichung City 401, Taiwan</div>
+        <div class="label">Address</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <div>
+        <div class="value"><a href="https://huernghorng.com" target="_blank" rel="noopener">huernghorng.com</a></div>
+        <div class="label">Website</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="company-footer">
+    HUERNG HORNG HARDWARES CO., LTD 恒鋐五金有限公司
+  </div>
+
+</div>
+
+</body>
+</html>

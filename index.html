@@ -158,10 +158,50 @@
         color: var(--brand-dark);
         text-decoration: none;
       }
+      .splash {
+        position: fixed;
+        inset: 0;
+        background: var(--brand-dark);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        z-index: 999;
+        transition:
+          opacity 0.5s ease,
+          visibility 0.5s ease;
+      }
+      .splash img {
+        width: 110px;
+        height: auto;
+      }
+      .splash .splash-text {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .splash.hide {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .card {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      .card.show {
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
-    <div class="card">
+    <div class="splash" id="splash">
+      <img src="logo.png" alt="HUERNG HORNG HARDWARES" />
+      <div class="splash-text">HUERNG HORNG HARDWARES</div>
+    </div>
+    <div class="card" id="card">
       <!-- 上方頭像/姓名區 -->
       <div class="header">
         <!-- 佔位頭像，之後換成 <img class="avatar" src="logo.png" alt="錢庭羽"> -->
@@ -329,5 +369,13 @@
         HUERNG HORNG HARDWARES CO., LTD 恒鋐五金有限公司
       </div>
     </div>
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.getElementById("splash").classList.add("hide");
+          document.getElementById("card").classList.add("show");
+        }, 1200);
+      });
+    </script>
   </body>
 </html>
